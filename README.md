@@ -9,16 +9,13 @@ A font settings view made by SwiftUI
 * iOS 16.1+
 
 ## Install
-<details>
- <summary><strong>Swift Packages</strong></summary>
-
+ ### Swift Packages
 * Repository: https://github.com/guoyingtao/SwiftUIFontSettings.git
-* Rules: Version - Exact - 1.0.0
+* Rules: Version - Exact - 1.0.0 
 
-</details> 
-
+## Demos
 <p align="center">
-    <img src="images/demo.gif" height="500" alt="Demo" /> 
+    <img src="images/demo.gif" height="600" alt="Demo" /> 
     <img src="images/screenshot1.png" height="500" alt="Font List" /> 
     <img src="images/screenshot2.png" height="500" alt="Font Settings" /> 
 </p>
