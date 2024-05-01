@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftUIFontSettingsView",
-    platforms: [.iOS(.v17)],
+    platforms: [.iOS("16.1")],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(

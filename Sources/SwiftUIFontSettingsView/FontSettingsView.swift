@@ -17,7 +17,18 @@ public struct FontSettings {
     public var fontWidth = Font.Width.standard
     public var fontDesign = Font.Design.default
     
-    public init() {}
+    public var customFontSize: CGFloat = 17 {
+        didSet {
+            setupCustomFont()
+        }
+    }
+    
+    public var customFontName = "Helvetica" {
+        didSet {
+            setupCustomFont()
+        }
+    }
+
     
     public var font: Font {
         if useCustomFont {
@@ -26,6 +37,12 @@ public struct FontSettings {
         } else {
             return Font.system(textStyle, design: fontDesign, weight: fontWeight).width(fontWidth)
         }
+    }
+    
+    public init() {}
+    
+    private mutating func setupCustomFont() {
+        customFont = Font.custom(customFontName, size: customFontSize)
     }
 }
 
@@ -56,8 +73,6 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
     private let extraBottomContent: ExtraBottomContent?
 
     @State private var showFontPicker = false
-    @State private var customFontName = "Helvetica"
-    @State private var customFontSize: CGFloat = 17
     
     var previewFontSection: some View {
         Section(fontSettingsText.previewSectionTitle) {
@@ -86,24 +101,18 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                 Group {
                     HStack {
                         NavigationLink {
-                            FontNamesView(fontName: $customFontName)
+                            FontNamesView(fontName: $fontSettings.customFontName)
                         } label: {
                             HStack {
                                 Text("Font Name")
                                 Spacer()
-                                Text(customFontName)
+                                Text(fontSettings.customFontName)
                                     .foregroundStyle(.gray)
                             }
                         }
                     }
                     
-                    Stepper("Font Size: \(Int(customFontSize))", value: $customFontSize, in: 12...72, step: 1.0)
-                }
-                .onChange(of: customFontName) { old, new in
-                    fontSettings.customFont = Font.custom(new, size: customFontSize)
-                }
-                .onChange(of: customFontSize) { old, new in
-                    fontSettings.customFont = Font.custom(customFontName, size: new)
+                    Stepper("Font Size: \(Int(fontSettings.customFontSize))", value: $fontSettings.customFontSize, in: 12...72, step: 1.0)
                 }
             } else {
                 Picker("Text Style", selection: $fontSettings.textStyle) {
