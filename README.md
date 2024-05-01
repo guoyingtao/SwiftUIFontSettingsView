@@ -11,7 +11,26 @@ A font settings view made by SwiftUI
 ## Install
  ### Swift Packages
 * Repository: https://github.com/guoyingtao/SwiftUIFontSettings.git
-* Rules: Version - Exact - 1.0.0 
+* Rules: Version - Exact - 1.0.0
+
+## Usage
+
+```Swift
+@State private var fontSettings: FontSettings = FontSettings()
+...
+FontSettingsView(fontSettings: $fontSettings)
+
+...
+
+FontSettingsView(fontSettings: $fontSettings, showExtraTopContent: true, topContentBuilder:  {
+    // some view here
+})
+
+...
+FontSettingsView(fontSettings: $fontSettings, showExtraBottomContent: true, bottomContentBuilder:  {
+    // some view here
+})
+```
 
 ## Demos
 <p align="center">
