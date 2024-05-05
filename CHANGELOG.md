@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/guoyingtao/SwiftUIFontSettingsView/compare/v1.0.0...v1.1.0) (2024-05-05)
+
+
+### Features
+
+* increase custom font size upper limit ([0824ea8](https://www.github.com/guoyingtao/SwiftUIFontSettingsView/commit/0824ea8748e168711a1981d0ddb7289daf7bc43b))
+
 ## 1.0.0 (2024-05-01)
 
 
