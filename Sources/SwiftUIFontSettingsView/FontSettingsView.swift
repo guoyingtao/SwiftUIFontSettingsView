@@ -12,12 +12,12 @@ public struct FontSettings {
     public var backgroundColor = Color.clear
     public var textStyle = Font.TextStyle.title
     public var useCustomFont = false
-    public var customFont = Font.system(size: 17)
+    public var customFont = Font.system(size: 28)
     public var fontWeight = Font.Weight.regular
     public var fontWidth = Font.Width.standard
     public var fontDesign = Font.Design.default
     
-    public var customFontSize: CGFloat = 17 {
+    public var customFontSize: CGFloat = 28 {
         didSet {
             setupCustomFont()
         }
@@ -28,7 +28,6 @@ public struct FontSettings {
             setupCustomFont()
         }
     }
-
     
     public var font: Font {
         if useCustomFont {
@@ -47,13 +46,13 @@ public struct FontSettings {
 }
 
 public struct FontSettingsText {
-    var previewText = "Hello World"
+    var previewText = "Hi"
     var previewSectionTitle = "Font Preview"
     var colorSectionTitle = "Font Colors"
     var fontsSectionTitle = "Font Settings"
     var navigationTitle = "Font Settings"
     
-    public init(previewText: String = "Hello World", previewSectionTitle: String = "Font Preview", colorSectionTitle: String = "Font Colors", fontsSectionTitle: String = "Font Settings",
+    public init(previewText: String = "Hi", previewSectionTitle: String = "Font Preview", colorSectionTitle: String = "Font Colors", fontsSectionTitle: String = "Font Settings",
         navigationTitle: String = "Font Settings") {
         self.previewText = previewText
         self.previewSectionTitle = previewSectionTitle
@@ -112,7 +111,11 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                         }
                     }
                     
-                    Stepper("Font Size: \(Int(fontSettings.customFontSize))", value: $fontSettings.customFontSize, in: 12...72, step: 1.0)
+                    HStack {
+                        Text("Font Size: \(Int(fontSettings.customFontSize))")
+                        Spacer()
+                        Slider(value: $fontSettings.customFontSize, in: 12...200)
+                    }
                 }
             } else {
                 Picker("Text Style", selection: $fontSettings.textStyle) {
