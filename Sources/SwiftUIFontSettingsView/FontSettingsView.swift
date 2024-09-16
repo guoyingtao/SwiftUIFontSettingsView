@@ -145,15 +145,19 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
             }
         }
     }
+    
+    private let backgroundColor: Color?
         
     public init(fontSettings: Binding<FontSettings>,
         fontSettingsText: FontSettingsText = FontSettingsText(),
+        backgroundColor: Color? = nil,
         showExtraTopContent: Bool = false,
         @ViewBuilder topContentBuilder: () -> ExtraTopContent = (EmptyView.init),
          showExtraBottomContent: Bool = false,
          @ViewBuilder bottomContentBuilder: () -> ExtraBottomContent = (EmptyView.init)) {
         self._fontSettings = fontSettings
         self.fontSettingsText = fontSettingsText
+        self.backgroundColor = backgroundColor
         self.showExtraTopContent = showExtraTopContent
         self.extraTopContent = topContentBuilder()
         self.showExtraBottomContent = showExtraBottomContent
@@ -162,20 +166,43 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
     
     public var body: some View {
         NavigationStack {
-            Form {
-                if showExtraTopContent {
-                    extraTopContent
+            ZStack {
+                if let backgroundColor {
+                    backgroundColor
                 }
                 
-                previewFontSection
-                
-                colorSettingsSection
-                
-                fontSettingsSection
-                
-                if showExtraBottomContent {
-                    extraBottomContent
+                Form {
+                    if showExtraTopContent {
+                        extraTopContent
+                    }
+                    
+                    previewFontSection
+                    
+                    colorSettingsSection
+                    
+                    fontSettingsSection
+                    
+                    if showExtraBottomContent {
+                        extraBottomContent
+                    }
                 }
+                .modifier(ConditionalBackgroundModifier(backgroundColor: backgroundColor))
+            }
+        }
+    }
+}
+
+struct ConditionalBackgroundModifier: ViewModifier {
+    let backgroundColor: Color?
+    
+    func body(content: Content) -> some View {
+        Group {
+            if let backgroundColor = backgroundColor {
+                content
+                    .scrollContentBackground(.hidden)
+                    .background(backgroundColor)
+            } else {
+                content
             }
         }
     }
