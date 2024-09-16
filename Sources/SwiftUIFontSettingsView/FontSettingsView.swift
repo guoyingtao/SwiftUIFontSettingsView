@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct FontSettings {
+public struct FontSettings: Equatable {
     public var foregroundColor = Color.black
     public var backgroundColor = Color.clear
     public var textStyle = Font.TextStyle.title
