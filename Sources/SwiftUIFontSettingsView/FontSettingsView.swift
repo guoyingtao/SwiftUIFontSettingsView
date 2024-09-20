@@ -29,7 +29,11 @@ public struct FontSettings: Equatable {
         }
     }
     
-    public let customFontNames: [String]
+    public var customFontNames: [String] = [] {
+        didSet {
+            customFontName = customFontNames.first ?? "Helvetica"
+        }
+    }
     
     public var font: Font {
         if useCustomFont {
@@ -40,10 +44,7 @@ public struct FontSettings: Equatable {
         }
     }
     
-    public init(customFontNames: [String] = []) {
-        self.customFontNames = customFontNames        
-        customFontName = customFontNames.first ?? "Helvetica"
-    }
+    public init() {}
     
     private mutating func setupCustomFont() {
         customFont = Font.custom(customFontName, size: customFontSize)
