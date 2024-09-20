@@ -143,10 +143,12 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                     }
                 }
             }
-                                
-            Picker("Font Width", selection: $fontSettings.fontWidth) {
-                ForEach(Font.Width.allWidths, id: \.self) { width in
-                    Text(width.description)
+            
+            if !fontSettings.useCustomFont || fontSettings.useCustomFont && fontSettings.customFontNames.isEmpty {
+                Picker("Font Width", selection: $fontSettings.fontWidth) {
+                    ForEach(Font.Width.allWidths, id: \.self) { width in
+                        Text(width.description)
+                    }
                 }
             }
         }
