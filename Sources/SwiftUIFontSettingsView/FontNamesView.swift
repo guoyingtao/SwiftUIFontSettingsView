@@ -13,6 +13,8 @@ struct FontNamesView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var fontName: String
     
+    let customFontNames: [String]
+    
     private let fontNames: [String] = {
         var names = [String]()
         for familyName in UIFont.familyNames {
@@ -20,9 +22,22 @@ struct FontNamesView: View {
         }
         return names.sorted()
     }()
+    
+    private var nameList: [String] {
+        if !customFontNames.isEmpty {
+            customFontNames
+        } else {
+            fontNames
+        }
+    }
+    
+    init(fontName: Binding<String>, customFontNames: [String] = []) {
+        _fontName = fontName
+        self.customFontNames = customFontNames
+    }
 
     var body: some View {
-        List(fontNames, id: \.self) { fontName in
+        List(nameList, id: \.self) { fontName in
             HStack {
                 Text(fontName)
                     .font(Font.custom(fontName, size: 17))

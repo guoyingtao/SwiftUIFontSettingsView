@@ -29,6 +29,8 @@ public struct FontSettings: Equatable {
         }
     }
     
+    public let customFontNames: [String]
+    
     public var font: Font {
         if useCustomFont {
             return customFont
@@ -38,7 +40,10 @@ public struct FontSettings: Equatable {
         }
     }
     
-    public init() {}
+    public init(customFontNames: [String] = []) {
+        self.customFontNames = customFontNames        
+        customFontName = customFontNames.first ?? "Helvetica"
+    }
     
     private mutating func setupCustomFont() {
         customFont = Font.custom(customFontName, size: customFontSize)
@@ -100,7 +105,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                 Group {
                     HStack {
                         NavigationLink {
-                            FontNamesView(fontName: $fontSettings.customFontName)
+                            FontNamesView(fontName: $fontSettings.customFontName, customFontNames: fontSettings.customFontNames)
                         } label: {
                             HStack {
                                 Text("Font Name")
