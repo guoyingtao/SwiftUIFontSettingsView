@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F257480E2CA4C361007E7872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F2D9A1BE2BE2B21700B053D3 /* SwiftUIFontSettingsView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIFontSettingsView; path = ..; sourceTree = "<group>"; };
 		F2F13FA52BE2B589009E7CC0 /* SwiftUIFontSettingsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFontSettingsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F13FA72BE2B589009E7CC0 /* SwiftUIFontSettingsDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFontSettingsDemoApp.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		F2F13FA62BE2B589009E7CC0 /* SwiftUIFontSettingsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F257480E2CA4C361007E7872 /* Info.plist */,
 				F2F13FA72BE2B589009E7CC0 /* SwiftUIFontSettingsDemoApp.swift */,
 				F2F13FA92BE2B589009E7CC0 /* ContentView.swift */,
 				F2F13FAB2BE2B58A009E7CC0 /* Assets.xcassets */,
@@ -290,6 +292,7 @@
 				DEVELOPMENT_TEAM = 3V26Q55U3S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIFontSettingsDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +322,7 @@
 				DEVELOPMENT_TEAM = 3V26Q55U3S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIFontSettingsDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

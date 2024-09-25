@@ -52,19 +52,22 @@ public struct FontSettings: Equatable {
 }
 
 public struct FontSettingsText {
-    var previewText = "Hi"
-    var previewSectionTitle = "Font Preview"
-    var colorSectionTitle = "Font Colors"
-    var fontsSectionTitle = "Font Settings"
-    var navigationTitle = "Font Settings"
+    var previewText = NSLocalizedString("fontSettings.previewText", bundle: .module, comment: "")
+    var previewSectionTitle = NSLocalizedString("fontSettings.previewSectionTitle", bundle: .module, comment: "")
+    var colorSectionTitle = NSLocalizedString("fontSettings.colorSectionTitle", bundle: .module, comment: "")
+    var fontsSectionTitle = NSLocalizedString("fontSettings.fontsSectionTitle", bundle: .module, comment: "")
+    var navigationTitle = NSLocalizedString("fontSettings.navigationTitle", bundle: .module, comment: "")
     
-    public init(previewText: String = "Hi", previewSectionTitle: String = "Font Preview", colorSectionTitle: String = "Font Colors", fontsSectionTitle: String = "Font Settings",
-        navigationTitle: String = "Font Settings") {
-        self.previewText = previewText
-        self.previewSectionTitle = previewSectionTitle
-        self.colorSectionTitle = colorSectionTitle
-        self.fontsSectionTitle = fontsSectionTitle
-        self.navigationTitle = navigationTitle
+    public init(previewText: String = "",
+                previewSectionTitle: String = "",
+                colorSectionTitle: String = "",
+                fontsSectionTitle: String = "",
+                navigationTitle: String = "") {
+        self.previewText = previewText.isEmpty ? NSLocalizedString("fontSettings.previewText", bundle: .module, comment: "") : previewText
+        self.previewSectionTitle = previewSectionTitle.isEmpty ? NSLocalizedString("fontSettings.previewSectionTitle", bundle: .module, comment: "") : previewSectionTitle
+        self.colorSectionTitle = colorSectionTitle.isEmpty ? NSLocalizedString("fontSettings.colorSectionTitle", bundle: .module, comment: "") : colorSectionTitle
+        self.fontsSectionTitle = fontsSectionTitle.isEmpty ? NSLocalizedString("fontSettings.fontsSectionTitle", bundle: .module, comment: "") : fontsSectionTitle
+        self.navigationTitle = navigationTitle.isEmpty ? NSLocalizedString("fontSettings.navigationTitle", bundle: .module, comment: "") : navigationTitle
     }
 }
 
@@ -90,15 +93,15 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
     
     var colorSettingsSection: some View {
         Section(fontSettingsText.colorSectionTitle) {
-            ColorPicker("Set the text foreground color", selection: $fontSettings.foregroundColor)
-            ColorPicker("Set the text background color", selection: $fontSettings.backgroundColor)
+            ColorPicker(NSLocalizedString("fontSettings.foregroundColorPicker", bundle: .module, comment: ""), selection: $fontSettings.foregroundColor)
+            ColorPicker(NSLocalizedString("fontSettings.backgroundColorPicker", bundle: .module, comment: ""), selection: $fontSettings.backgroundColor)
         }
     }
     
     var fontSettingsSection: some View {
         Section(fontSettingsText.fontsSectionTitle) {
             HStack {
-                Text("Use Custom Font")
+                Text(NSLocalizedString("fontSettings.useCustomFont", bundle: .module, comment: ""))
                 Spacer()
                 Toggle("", isOn: $fontSettings.useCustomFont.animation())
             }
@@ -109,7 +112,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                             FontNamesView(fontName: $fontSettings.customFontName, customFontNames: fontSettings.customFontNames)
                         } label: {
                             HStack {
-                                Text("Font Name")
+                                Text(NSLocalizedString("fontSettings.fontName", bundle: .module, comment: ""))
                                 Spacer()
                                 Text(fontSettings.customFontName)
                                     .foregroundStyle(.gray)
@@ -118,36 +121,36 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                     }
                     
                     HStack {
-                        Text("Font Size: \(Int(fontSettings.customFontSize))")
+                        Text(String(format: NSLocalizedString("fontSettings.fontSize", bundle: .module, comment: ""), Int(fontSettings.customFontSize)))
                         Spacer()
                         Slider(value: $fontSettings.customFontSize, in: 12...200)
                     }
                 }
             } else {
-                Picker("Text Style", selection: $fontSettings.textStyle) {
+                Picker(NSLocalizedString("fontSettings.textStyle", bundle: .module, comment: ""), selection: $fontSettings.textStyle) {
                     ForEach(Font.TextStyle.allTextStyles, id: \.self) { style in
-                        Text(style.description)
+                        Text(NSLocalizedString(style.description, bundle: .module, comment: ""))
                     }
                 }
                 
-                Picker("Font Weight", selection: $fontSettings.fontWeight) {
+                Picker(NSLocalizedString("fontSettings.fontWeight", bundle: .module, comment: ""), selection: $fontSettings.fontWeight) {
                     ForEach(Font.Weight.allWeights, id: \.self) { weight in
-                        Text(weight.description)
+                        Text(NSLocalizedString(weight.description, bundle: .module, comment: ""))
                     }
                 }
                 
-                Picker("Font Design", selection: $fontSettings.fontDesign) {
+                Picker(NSLocalizedString("fontSettings.fontDesign", bundle: .module, comment: ""), selection: $fontSettings.fontDesign) {
                     ForEach(Font.Design.allDesigns, id: \.self) { design in
-                        Text(design.description)
+                        Text(NSLocalizedString(design.description, bundle: .module, comment: ""))
                             .fontDesign(design)
                     }
                 }
             }
             
             if !fontSettings.useCustomFont || fontSettings.useCustomFont && fontSettings.customFontNames.isEmpty {
-                Picker("Font Width", selection: $fontSettings.fontWidth) {
+                Picker(NSLocalizedString("fontSettings.fontWidth", bundle: .module, comment: ""), selection: $fontSettings.fontWidth) {
                     ForEach(Font.Width.allWidths, id: \.self) { width in
-                        Text(width.description)
+                        Text(NSLocalizedString(width.description, bundle: .module, comment: ""))
                     }
                 }
             }
