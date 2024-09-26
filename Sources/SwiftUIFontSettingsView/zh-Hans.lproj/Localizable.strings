@@ -5,7 +5,7 @@
 "fontSettings.fontDesign" = "字体设计";
 
 // Font Weight Options
-"fontWeight.ultraLight" = "极细";
+"fontWeight.ultra light" = "极细";
 "fontWeight.thin" = "纤细";
 "fontWeight.light" = "细体";
 "fontWeight.regular" = "常规";
@@ -44,3 +44,22 @@
 "fontSettings.textStyle" = "文本样式";
 "fontSettings.fontWidth" = "字体宽度";
 "fontSettings.fontSize" = "字体大小：%d";
+
+// New Text Style localizations
+"textStyle.large title" = "大标题";
+"textStyle.title" = "标题";
+"textStyle.title2" = "标题2";
+"textStyle.title3" = "标题3";
+"textStyle.headline" = "头条";
+"textStyle.subheadline" = "副标题";
+"textStyle.body" = "正文";
+"textStyle.callout" = "引用";
+"textStyle.footnote" = "脚注";
+"textStyle.caption" = "说明";
+"textStyle.caption2" = "说明2";
+
+// New Font Width localizations
+"fontWidth.compressed" = "压缩";
+"fontWidth.condensed" = "紧缩";
+"fontWidth.standard" = "标准";
+"fontWidth.expanded" = "扩展";

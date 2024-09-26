@@ -129,19 +129,19 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
             } else {
                 Picker(NSLocalizedString("fontSettings.textStyle", bundle: .module, comment: ""), selection: $fontSettings.textStyle) {
                     ForEach(Font.TextStyle.allTextStyles, id: \.self) { style in
-                        Text(NSLocalizedString(style.description, bundle: .module, comment: ""))
+                        Text(NSLocalizedString("textStyle." + style.description.lowercased(), bundle: .module, comment: ""))
                     }
                 }
                 
                 Picker(NSLocalizedString("fontSettings.fontWeight", bundle: .module, comment: ""), selection: $fontSettings.fontWeight) {
                     ForEach(Font.Weight.allWeights, id: \.self) { weight in
-                        Text(NSLocalizedString(weight.description, bundle: .module, comment: ""))
+                        Text(NSLocalizedString("fontWeight." + weight.description.lowercased(), bundle: .module, comment: ""))
                     }
                 }
                 
                 Picker(NSLocalizedString("fontSettings.fontDesign", bundle: .module, comment: ""), selection: $fontSettings.fontDesign) {
                     ForEach(Font.Design.allDesigns, id: \.self) { design in
-                        Text(NSLocalizedString(design.description, bundle: .module, comment: ""))
+                        Text(NSLocalizedString("fontDesign." + design.description.lowercased(), bundle: .module, comment: ""))
                             .fontDesign(design)
                     }
                 }
@@ -150,7 +150,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
             if !fontSettings.useCustomFont || fontSettings.useCustomFont && fontSettings.customFontNames.isEmpty {
                 Picker(NSLocalizedString("fontSettings.fontWidth", bundle: .module, comment: ""), selection: $fontSettings.fontWidth) {
                     ForEach(Font.Width.allWidths, id: \.self) { width in
-                        Text(NSLocalizedString(width.description, bundle: .module, comment: ""))
+                        Text(NSLocalizedString("fontWidth." + width.description.lowercased(), bundle: .module, comment: ""))
                     }
                 }
             }

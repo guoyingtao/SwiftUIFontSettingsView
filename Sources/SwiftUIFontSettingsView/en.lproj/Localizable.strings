@@ -5,7 +5,7 @@
 "fontSettings.fontDesign" = "Font Design";
 
 // Font Weight Options
-"fontWeight.ultraLight" = "Ultra Light";
+"fontWeight.ultra light" = "Ultra Light";
 "fontWeight.thin" = "Thin";
 "fontWeight.light" = "Light";
 "fontWeight.regular" = "Regular";
@@ -44,3 +44,22 @@
 "fontSettings.textStyle" = "Text Style";
 "fontSettings.fontWidth" = "Font Width";
 "fontSettings.fontSize" = "Font Size: %d";
+
+// New Text Style localizations
+"textStyle.large title" = "Large Title";
+"textStyle.title" = "Title";
+"textStyle.title2" = "Title 2";
+"textStyle.title3" = "Title 3";
+"textStyle.headline" = "Headline";
+"textStyle.subheadline" = "Subheadline";
+"textStyle.body" = "Body";
+"textStyle.callout" = "Callout";
+"textStyle.footnote" = "Footnote";
+"textStyle.caption" = "Caption";
+"textStyle.caption2" = "Caption 2";
+
+// New Font Width localizations
+"fontWidth.compressed" = "Compressed";
+"fontWidth.condensed" = "Condensed";
+"fontWidth.standard" = "Standard";
+"fontWidth.expanded" = "Expanded";

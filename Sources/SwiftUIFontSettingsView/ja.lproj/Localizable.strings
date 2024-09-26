@@ -5,7 +5,7 @@
 "fontSettings.fontDesign" = "フォントデザイン";
 
 // Font Weight Options
-"fontWeight.ultraLight" = "極細";
+"fontWeight.ultra light" = "極細";
 "fontWeight.thin" = "細";
 "fontWeight.light" = "軽";
 "fontWeight.regular" = "標準";
@@ -44,3 +44,22 @@
 "fontSettings.textStyle" = "テキストスタイル";
 "fontSettings.fontWidth" = "フォントの幅";
 "fontSettings.fontSize" = "フォントサイズ：%d";
+
+// New Text Style localizations
+"textStyle.large title" = "ラージタイトル";
+"textStyle.title" = "タイトル";
+"textStyle.title2" = "タイトル2";
+"textStyle.title3" = "タイトル3";
+"textStyle.headline" = "見出し";
+"textStyle.subheadline" = "サブ見出し";
+"textStyle.body" = "本文";
+"textStyle.callout" = "コールアウト";
+"textStyle.footnote" = "脚注";
+"textStyle.caption" = "キャプション";
+"textStyle.caption2" = "キャプション2";
+
+// New Font Width localizations
+"fontWidth.compressed" = "圧縮";
+"fontWidth.condensed" = "凝縮";
+"fontWidth.standard" = "標準";
+"fontWidth.expanded" = "拡張";
