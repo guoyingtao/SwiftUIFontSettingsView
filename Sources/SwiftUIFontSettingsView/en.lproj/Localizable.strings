@@ -3,6 +3,18 @@
 "fontSettings.fontSize" = "Font Size";
 "fontSettings.fontWeight" = "Font Weight";
 "fontSettings.fontDesign" = "Font Design";
+"fontSettings.previewText" = "Hi";
+"fontSettings.previewSectionTitle" = "Font Preview";
+"fontSettings.colorSectionTitle" = "Font Colors";
+"fontSettings.fontsSectionTitle" = "Font Settings";
+"fontSettings.navigationTitle" = "Font Settings";
+"fontSettings.foregroundColorPicker" = "Set the text foreground color";
+"fontSettings.backgroundColorPicker" = "Set the text background color";
+"fontSettings.useCustomFont" = "Use Custom Font";
+"fontSettings.fontName" = "Font Name";
+"fontSettings.textStyle" = "Text Style";
+"fontSettings.fontWidth" = "Font Width";
+"fontSettings.fontSize" = "Font Size: %d";
 
 // Font Weight Options
 "fontWeight.ultra light" = "Ultra Light";
@@ -21,31 +33,7 @@
 "fontDesign.rounded" = "Rounded";
 "fontDesign.serif" = "Serif";
 
-// Buttons
-"button.apply" = "Apply";
-"button.reset" = "Reset";
-
-// Alerts
-"alert.changes.title" = "Changes Applied";
-"alert.changes.message" = "Font settings have been updated.";
-"alert.reset.title" = "Settings Reset";
-"alert.reset.message" = "Font settings have been reset to default values.";
-
-// New strings
-"fontSettings.previewText" = "Hi";
-"fontSettings.previewSectionTitle" = "Font Preview";
-"fontSettings.colorSectionTitle" = "Font Colors";
-"fontSettings.fontsSectionTitle" = "Font Settings";
-"fontSettings.navigationTitle" = "Font Settings";
-"fontSettings.foregroundColorPicker" = "Set the text foreground color";
-"fontSettings.backgroundColorPicker" = "Set the text background color";
-"fontSettings.useCustomFont" = "Use Custom Font";
-"fontSettings.fontName" = "Font Name";
-"fontSettings.textStyle" = "Text Style";
-"fontSettings.fontWidth" = "Font Width";
-"fontSettings.fontSize" = "Font Size: %d";
-
-// New Text Style localizations
+// Text Style localizations
 "textStyle.large title" = "Large Title";
 "textStyle.title" = "Title";
 "textStyle.title2" = "Title 2";
@@ -58,7 +46,7 @@
 "textStyle.caption" = "Caption";
 "textStyle.caption2" = "Caption 2";
 
-// New Font Width localizations
+// Font Width localizations
 "fontWidth.compressed" = "Compressed";
 "fontWidth.condensed" = "Condensed";
 "fontWidth.standard" = "Standard";

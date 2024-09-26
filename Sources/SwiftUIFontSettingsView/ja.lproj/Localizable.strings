@@ -3,6 +3,18 @@
 "fontSettings.fontSize" = "フォントサイズ";
 "fontSettings.fontWeight" = "フォントの太さ";
 "fontSettings.fontDesign" = "フォントデザイン";
+"fontSettings.previewText" = "こんにちは";
+"fontSettings.previewSectionTitle" = "フォントプレビュー";
+"fontSettings.colorSectionTitle" = "フォントカラー";
+"fontSettings.fontsSectionTitle" = "フォント設定";
+"fontSettings.navigationTitle" = "フォント設定";
+"fontSettings.foregroundColorPicker" = "テキストの前景色を設定";
+"fontSettings.backgroundColorPicker" = "テキストの背景色を設定";
+"fontSettings.useCustomFont" = "カスタムフォントを使用";
+"fontSettings.fontName" = "フォント名";
+"fontSettings.textStyle" = "テキストスタイル";
+"fontSettings.fontWidth" = "フォントの幅";
+"fontSettings.fontSize" = "フォントサイズ：%d";
 
 // Font Weight Options
 "fontWeight.ultra light" = "極細";
@@ -21,31 +33,7 @@
 "fontDesign.rounded" = "丸文字";
 "fontDesign.serif" = "セリフ";
 
-// Buttons
-"button.apply" = "適用";
-"button.reset" = "リセット";
-
-// Alerts
-"alert.changes.title" = "変更が適用されました";
-"alert.changes.message" = "フォント設定が更新されました。";
-"alert.reset.title" = "設定がリセットされました";
-"alert.reset.message" = "フォント設定がデフォルト値にリセットされました。";
-
-// New strings
-"fontSettings.previewText" = "こんにちは";
-"fontSettings.previewSectionTitle" = "フォントプレビュー";
-"fontSettings.colorSectionTitle" = "フォントカラー";
-"fontSettings.fontsSectionTitle" = "フォント設定";
-"fontSettings.navigationTitle" = "フォント設定";
-"fontSettings.foregroundColorPicker" = "テキストの前景色を設定";
-"fontSettings.backgroundColorPicker" = "テキストの背景色を設定";
-"fontSettings.useCustomFont" = "カスタムフォントを使用";
-"fontSettings.fontName" = "フォント名";
-"fontSettings.textStyle" = "テキストスタイル";
-"fontSettings.fontWidth" = "フォントの幅";
-"fontSettings.fontSize" = "フォントサイズ：%d";
-
-// New Text Style localizations
+// Text Style localizations
 "textStyle.large title" = "ラージタイトル";
 "textStyle.title" = "タイトル";
 "textStyle.title2" = "タイトル2";
@@ -58,7 +46,7 @@
 "textStyle.caption" = "キャプション";
 "textStyle.caption2" = "キャプション2";
 
-// New Font Width localizations
+// Font Width localizations
 "fontWidth.compressed" = "圧縮";
 "fontWidth.condensed" = "凝縮";
 "fontWidth.standard" = "標準";

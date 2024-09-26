@@ -3,6 +3,18 @@
 "fontSettings.fontSize" = "字体大小";
 "fontSettings.fontWeight" = "字体粗细";
 "fontSettings.fontDesign" = "字体设计";
+"fontSettings.previewText" = "你好";
+"fontSettings.previewSectionTitle" = "字体预览";
+"fontSettings.colorSectionTitle" = "字体颜色";
+"fontSettings.fontsSectionTitle" = "字体设置";
+"fontSettings.navigationTitle" = "字体设置";
+"fontSettings.foregroundColorPicker" = "设置文本前景色";
+"fontSettings.backgroundColorPicker" = "设置文本背景色";
+"fontSettings.useCustomFont" = "使用自定义字体";
+"fontSettings.fontName" = "字体名称";
+"fontSettings.textStyle" = "文本样式";
+"fontSettings.fontWidth" = "字体宽度";
+"fontSettings.fontSize" = "字体大小：%d";
 
 // Font Weight Options
 "fontWeight.ultra light" = "极细";
@@ -21,29 +33,6 @@
 "fontDesign.rounded" = "圆体";
 "fontDesign.serif" = "衬线";
 
-// Buttons
-"button.apply" = "应用";
-"button.reset" = "重置";
-
-// Alerts
-"alert.changes.title" = "已应用更改";
-"alert.changes.message" = "字体设置已更新。";
-"alert.reset.title" = "设置已重置";
-"alert.reset.message" = "字体设置已重置为默认值。";
-
-// New strings
-"fontSettings.previewText" = "你好";
-"fontSettings.previewSectionTitle" = "字体预览";
-"fontSettings.colorSectionTitle" = "字体颜色";
-"fontSettings.fontsSectionTitle" = "字体设置";
-"fontSettings.navigationTitle" = "字体设置";
-"fontSettings.foregroundColorPicker" = "设置文本前景色";
-"fontSettings.backgroundColorPicker" = "设置文本背景色";
-"fontSettings.useCustomFont" = "使用自定义字体";
-"fontSettings.fontName" = "字体名称";
-"fontSettings.textStyle" = "文本样式";
-"fontSettings.fontWidth" = "字体宽度";
-"fontSettings.fontSize" = "字体大小：%d";
 
 // New Text Style localizations
 "textStyle.large title" = "大标题";
