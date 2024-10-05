@@ -17,6 +17,9 @@ public struct FontSettings: Equatable {
     public var fontWidth = Font.Width.standard
     public var fontDesign = Font.Design.default
     
+    public var fontSizeMin: CGFloat = 12
+    public var fontSizeMax: CGFloat = 200
+    
     public var customFontSize: CGFloat = 28 {
         didSet {
             setupCustomFont()
@@ -123,7 +126,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                     HStack {
                         Text(String(format: NSLocalizedString("fontSettings.fontSize", bundle: .module, comment: ""), Int(fontSettings.customFontSize)))
                         Spacer()
-                        Slider(value: $fontSettings.customFontSize, in: 12...200)
+                        Slider(value: $fontSettings.customFontSize, in: fontSettings.fontSizeMin...fontSettings.fontSizeMax)
                     }
                 }
             } else {
