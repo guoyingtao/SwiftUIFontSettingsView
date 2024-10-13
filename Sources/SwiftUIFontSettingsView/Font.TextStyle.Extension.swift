@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Font.TextStyle {
     static var allTextStyles: [Font.TextStyle] {
-        return [.largeTitle, .title, .headline, .subheadline, .body, .callout, .footnote, .caption]
+        return [.largeTitle, .title, .title2, .title3, .headline, .subheadline, .body, .callout, .footnote, .caption, .caption2]
     }
 
     var description: String {
@@ -18,6 +18,10 @@ extension Font.TextStyle {
             return "Large Title"
         case .title:
             return "Title"
+        case .title2:
+            return "Title 2"
+        case .title3:
+            return "Title 3"
         case .headline:
             return "Headline"
         case .subheadline:
@@ -30,6 +34,8 @@ extension Font.TextStyle {
             return "Footnote"
         case .caption:
             return "Caption"
+        case .caption2:
+            return "Caption 2"
         default:
             return "Body"
         }
@@ -41,6 +47,10 @@ extension Font.TextStyle {
             return .largeTitle
         case "Title":
             return .title
+        case "Title 2":
+            return .title2
+        case "Title 3":
+            return .title3
         case "Headline":
             return .headline
         case "Subheadline":
@@ -53,6 +63,8 @@ extension Font.TextStyle {
             return .footnote
         case "Caption":
             return .caption
+        case "Caption 2":
+            return .caption2
         default:
             return .body
         }

@@ -36,15 +36,15 @@
 // Text Style localizations
 "textStyle.large title" = "ラージタイトル";
 "textStyle.title" = "タイトル";
-"textStyle.title2" = "タイトル2";
-"textStyle.title3" = "タイトル3";
+"textStyle.title 2" = "タイトル2";
+"textStyle.title 3" = "タイトル3";
 "textStyle.headline" = "見出し";
 "textStyle.subheadline" = "サブ見出し";
 "textStyle.body" = "本文";
 "textStyle.callout" = "コールアウト";
 "textStyle.footnote" = "脚注";
 "textStyle.caption" = "キャプション";
-"textStyle.caption2" = "キャプション2";
+"textStyle.caption 2" = "キャプション2";
 
 // Font Width localizations
 "fontWidth.compressed" = "圧縮";

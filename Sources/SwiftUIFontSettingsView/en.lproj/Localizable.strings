@@ -36,15 +36,15 @@
 // Text Style localizations
 "textStyle.large title" = "Large Title";
 "textStyle.title" = "Title";
-"textStyle.title2" = "Title 2";
-"textStyle.title3" = "Title 3";
+"textStyle.title 2" = "Title 2";
+"textStyle.title 3" = "Title 3";
 "textStyle.headline" = "Headline";
 "textStyle.subheadline" = "Subheadline";
 "textStyle.body" = "Body";
 "textStyle.callout" = "Callout";
 "textStyle.footnote" = "Footnote";
 "textStyle.caption" = "Caption";
-"textStyle.caption2" = "Caption 2";
+"textStyle.caption 2" = "Caption 2";
 
 // Font Width localizations
 "fontWidth.compressed" = "Compressed";
