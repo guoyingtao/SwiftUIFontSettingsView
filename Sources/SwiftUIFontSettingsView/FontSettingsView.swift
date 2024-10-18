@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct FontSettings: Equatable {
-    public var showFontPreview = true
     public var foregroundColor = Color.black
     public var backgroundColor = Color.clear
     public var textStyle = Font.TextStyle.title
@@ -78,6 +77,7 @@ public struct FontSettingsText {
 public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>: View {
     @Binding var fontSettings: FontSettings
     
+    private let showFontPreview: Bool
     private let fontSettingsText: FontSettingsText
     private let showExtraTopContent: Bool
     private let extraTopContent: ExtraTopContent?
@@ -166,6 +166,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
     public init(fontSettings: Binding<FontSettings>,
         fontSettingsText: FontSettingsText = FontSettingsText(),
         backgroundColor: Color? = nil,
+        showFontPreview: Bool = true,
         showExtraTopContent: Bool = false,
         @ViewBuilder topContentBuilder: () -> ExtraTopContent = (EmptyView.init),
          showExtraBottomContent: Bool = false,
@@ -173,6 +174,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
         self._fontSettings = fontSettings
         self.fontSettingsText = fontSettingsText
         self.backgroundColor = backgroundColor
+        self.showFontPreview = showFontPreview
         self.showExtraTopContent = showExtraTopContent
         self.extraTopContent = topContentBuilder()
         self.showExtraBottomContent = showExtraBottomContent
@@ -193,7 +195,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                     
                     if showFontPreview {
                         previewFontSection
-                    }                    
+                    }
                     
                     colorSettingsSection
                     
