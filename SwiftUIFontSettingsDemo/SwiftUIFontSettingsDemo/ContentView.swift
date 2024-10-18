@@ -19,6 +19,7 @@ struct ContentView: View {
                 .font(fontSettings.font)
                 .foregroundStyle(fontSettings.foregroundColor)
                 .background(fontSettings.backgroundColor)
+                .shadow(color: fontSettings.shadowColor, radius: 1, x: 1, y: 1)
                 .navigationBarItems(trailing: Button("Font Settings") {
                     showFontSettings = true
                 })

@@ -10,6 +10,7 @@
 "fontSettings.navigationTitle" = "フォント設定";
 "fontSettings.foregroundColorPicker" = "テキストの前景色を設定";
 "fontSettings.backgroundColorPicker" = "テキストの背景色を設定";
+"fontSettings.shadowColorPicker" = "テキストの影の色を設定";
 "fontSettings.useCustomFont" = "カスタムフォントを使用";
 "fontSettings.fontName" = "フォント名";
 "fontSettings.textStyle" = "テキストスタイル";

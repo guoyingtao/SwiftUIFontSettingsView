@@ -10,6 +10,7 @@
 "fontSettings.navigationTitle" = "字体设置";
 "fontSettings.foregroundColorPicker" = "设置文本前景色";
 "fontSettings.backgroundColorPicker" = "设置文本背景色";
+"fontSettings.shadowColorPicker" = "设置文字阴影颜色";
 "fontSettings.useCustomFont" = "使用自定义字体";
 "fontSettings.fontName" = "字体名称";
 "fontSettings.textStyle" = "文本样式";

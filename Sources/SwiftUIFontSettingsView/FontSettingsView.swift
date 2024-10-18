@@ -10,6 +10,7 @@ import SwiftUI
 public struct FontSettings: Equatable {
     public var foregroundColor = Color.black
     public var backgroundColor = Color.clear
+    public var shadowColor = Color.clear
     public var textStyle = Font.TextStyle.title
     public var useCustomFont = false
     public var customFont = Font.system(size: 28)
@@ -96,6 +97,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
                 .font(fontSettings.font)
                 .foregroundStyle(fontSettings.foregroundColor)
                 .background(fontSettings.backgroundColor)
+                .shadow(color: fontSettings.shadowColor, radius: 1, x: 1, y: 1)
         }
     }
     
@@ -103,6 +105,7 @@ public struct FontSettingsView<ExtraTopContent: View, ExtraBottomContent: View>:
         Section(fontSettingsText.colorSectionTitle) {
             ColorPicker(NSLocalizedString("fontSettings.foregroundColorPicker", bundle: .module, comment: ""), selection: $fontSettings.foregroundColor)
             ColorPicker(NSLocalizedString("fontSettings.backgroundColorPicker", bundle: .module, comment: ""), selection: $fontSettings.backgroundColor)
+            ColorPicker(NSLocalizedString("fontSettings.shadowColorPicker", bundle: .module, comment: ""), selection: $fontSettings.shadowColor)
         }
     }
     

@@ -10,6 +10,7 @@
 "fontSettings.navigationTitle" = "Font Settings";
 "fontSettings.foregroundColorPicker" = "Set the text foreground color";
 "fontSettings.backgroundColorPicker" = "Set the text background color";
+"fontSettings.shadowColorPicker" = "Set the text shadow color";
 "fontSettings.useCustomFont" = "Use Custom Font";
 "fontSettings.fontName" = "Font Name";
 "fontSettings.textStyle" = "Text Style";
