@@ -47,6 +47,10 @@ public struct FontSettings: Equatable {
         }
     }
     
+    public func getScaledCustomFont(by scale: CGFloat) -> Font {
+        Font.custom(customFontName, size: customFontSize * scale).width(fontWidth)
+    }
+    
     public init() {}
     
     private mutating func setupCustomFont() {
