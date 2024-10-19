@@ -20,7 +20,7 @@ SwiftUIFontSettingsView is a simple but highly customizable SwiftUI view that al
 ## Install
  ### Swift Packages
 * Repository: https://github.com/guoyingtao/SwiftUIFontSettings.git
-* Rules: Version - Exact - 1.0.0
+* Rules: Version - Exact - 1.2.0
 
 ## Usage
 
